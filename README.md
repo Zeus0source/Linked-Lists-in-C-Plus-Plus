@@ -18,6 +18,71 @@ Following are some common applications of the linked list data structure:
 + Linked lists are used in text editors to implement undo and redo operations.
 + Linked lists are used to implement adjacency lists for the graph data structures.
 + Linked lists are also used to implement fundamental data structures like stack and queue.
+  
+# Algorithms:
+
+Algorithm: Create and Display a Single Linked List Node
+
+1. Start
+2. Define a class `Link` with:
+     Integer data member `d`.
+     Pointer `next` of type `Link`.
+     Constructor that initializes `d = num` and sets `next = NULL`.
+3. In `main()`:
+   1. Dynamically allocate a new node using `new Link(4)`.
+   2. Store its address in pointer `l1`.
+   3. Print the data part (`l1->d`).
+   4. Print the address stored in the `next` pointer (`l1->next`).
+4. End
+
+Algorithm: Insert at Tail in a Singly Linked List
+
+1. Start
+2. Define a class `Link` with:
+     Integer `data`.
+     Pointer `next` of type `Link`.
+     Constructor to initialize `data = num` and `next = NULL`.
+3. Define a function `insert_tail(head, data)` to insert a new node at the end:
+   1. Create a new node `new_node` with the given `data`.
+   2. If `head == NULL`, set `head = new_node`.
+   3. Else, traverse the list from `head` to the last node.
+   4. Set the `next` of the last node to `new_node`.
+4. Define a function `disp(head)` to display the linked list:
+   1. Start from `head`.
+   2. While the current node is not `NULL`:
+        Print `current->data` followed by `->`.
+        Move to the next node.
+   3. Print `NULL` at the end.
+5. In `main()`:
+   1. Initialize `head = NULL`.
+   2. Call `insert_tail(head, 20)` and `disp(head)`.
+   3. Call `insert_tail(head, 21)` and `disp(head)`.
+   4. Call `insert_tail(head, 22)` and `disp(head)`.
+6. End
+
+Algorithm: Insert at Head in a Singly Linked List
+
+1. Start
+2. Define a class `Link` with:
+     Integer `data`.
+     Pointer `next` of type `Link`.
+     Constructor to initialize `data = num` and `next = NULL`.
+3. Define a function `insert_head(head, data)` to insert a new node at the beginning:
+   1. Create a new node `new_node` with the given `data`.
+   2. Set `new_node->next = head`.
+   3. Update `head = new_node`.
+4. Define a function `disp(head)` to display the linked list:
+   1. Start from `head`.
+   2. While the current node is not `NULL`:
+        Print `current->data` followed by `->`.
+        Move to the next node.
+   3. Print `NULL` at the end.
+5. In `main()`:
+   1. Initialize `head = NULL`.
+   2. Call `insert_head(head, 20)` and `disp(head)`.
+   3. Call `insert_head(head, 21)` and `disp(head)`.
+   4. Call `insert_head(head, 22)` and `disp(head)`.
+6. End
 
 # Implementation:
 The following codes demonstrate the use of linked list in C++,
